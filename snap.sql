@@ -4,8 +4,9 @@ DROP TABLE IF EXISTS commentsnap;
 
 CREATE TABLE commentSnap(
 	commentId BINARY(16) NOT NULL,
-	commentDateTime DATETIME(6) NOT NULL,
-	commentText VARCHAR(128)
+	commentDateTime TIMESTAMP(6) NOT NULL,
+	commentText VARCHAR(128),
+	PRIMARY KEY(commentId)
 );
 
 INSERT INTO commentSnap (commentId, commentDateTime, commentText)
